@@ -27,7 +27,7 @@ EOT
         v.sort_by == null || (contains(["created", "updated", "popularity", "long-running"], v.sort_by))
       )
     ])
-    error_message = "must be one of: created, updated, popularity, long-running"
+    error_message = "must be one of: \"created\", \"updated\", \"popularity\", \"long-running\""
   }
   validation {
     condition = alltrue([
@@ -35,7 +35,7 @@ EOT
         v.sort_direction == null || (contains(["asc", "desc"], v.sort_direction))
       )
     ])
-    error_message = "must be one of: asc, desc"
+    error_message = "must be one of: \"asc\", \"desc\""
   }
   validation {
     condition = alltrue([
@@ -43,7 +43,7 @@ EOT
         v.state == null || (contains(["open", "closed", "all"], v.state))
       )
     ])
-    error_message = "must be one of: open, closed, all"
+    error_message = "must be one of: \"open\", \"closed\", \"all\""
   }
 }
 
